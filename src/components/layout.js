@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+// import akLogo from "../images/ak-gastby-logo.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -8,9 +10,19 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
+      // <h1 className="main-heading">
+      //   <Link to="/">{title}</Link>
+      // </h1>
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <Link to="/"><StaticImage
+        src="../images/ak-logo-gatsby.svg"
+        quality={100}
+        alt="Logo"
+      /></Link>
+    </h1>
+    // <h1 className="main-heading">
+    //   <Link to="/"> <img src="images/ak-gatsby-logo.svg" /></Link>
+    //   </h1>
     )
   } else {
     header = (
@@ -21,10 +33,19 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div>
+      <header className="global-header">
+      <h1 className="main-heading">
+      <Link to="/"><StaticImage
+        src="../images/ak-logo-gatsby.svg"
+        quality={100}
+        alt="Logo"
+      /></Link>
+    </h1></header>
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
       <main>{children}</main>
-      <footer>
+      </div>
+      <footer className="site-footer">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

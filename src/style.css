@@ -1,3 +1,7 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 /* CSS Custom Properties Definitions */
 
 :root {
@@ -27,10 +31,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  --fontFamily-sans: 'Playfair Display', Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-serif: 'Manrope', "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
@@ -54,12 +58,14 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #653DF1;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-pink: #C4066D;
+  --color-light-primary: #8664FC;
 }
 
 /* HTML elements */
@@ -81,10 +87,11 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: #EFEFEF;
 }
 
 footer {
-  padding: var(--spacing-6) var(--spacing-0);
+  padding: var(--spacing-6) var(--spacing-4);
 }
 
 hr {
@@ -105,7 +112,7 @@ h6 {
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
-  letter-spacing: -0.025em;
+  /* letter-spacing: -0.002em; */
 }
 
 h2,
@@ -114,13 +121,13 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  color: var(--color-primary);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-primary);
 }
 
 h2 {
@@ -227,6 +234,22 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
+pre{
+  background-color: hsla(327, 100%, 90%, 1);
+  color: hsla(253, 100%, 30%, 1);
+  overflow: auto;
+}
+code { 
+  padding: calc(2rem / 20) calc(2rem / 6); 
+}
+pre { 
+  padding: calc(2rem / 1.5); 
+  overflow-x: scroll;
+}
+pre::-webkit-scrollbar { 
+    display: none; 
+}
+
 /* Link */
 
 a {
@@ -257,6 +280,9 @@ a:focus {
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
+  padding: var(--spacing-4);
+  width: 80%;
+  max-width: var(--maxWidth-sm);
 }
 
 .post-list-item {
@@ -266,6 +292,7 @@ a:focus {
 
 .post-list-item p {
   margin-bottom: var(--spacing-0);
+  margin-top: var(--spacing-2);
 }
 
 .post-list-item h2 {
@@ -309,6 +336,9 @@ a:focus {
 .blog-post header p {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-pink);
+  margin-bottom: var(--spacing-1);
 }
 
 .blog-post-nav ul {
@@ -317,6 +347,62 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+  background-color: purple;
+}
+.site-footer {
+  /*   background-color: var(--col-accent); */
+  color: hsla(253, 100%, 92%, 1);
+  padding: calc(2rem * 3) var(--spacing-2);
+  margin-top: calc(2rem * 3);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  min-height: 10em;
+}
+.site-footer::before {
+  content: "";
+  background-color: hsla(152, 100%, 60%, 1);
+  background: linear-gradient(90deg, hsla(253, 100%, 60%, 1) 0%, hsla(253, 100%, 75%, 1) 100%);
+  /*   background: linear-gradient(90deg, rgba(209,50,81,1) 0%, rgba(230,98,95,1) 100%); */
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  top: 0;
+  margin-top: 6%;
+  left: -1em;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+.site-footer::after {
+  content: "";
+  background-color: hsla(327, 100%, 90%, 1);  
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  top: 0;
+  margin-top: 2%;
+  left: 0%;
+  z-index: -2;
+  transform: rotate(-2deg);
+}
+.site-footer a{
+  text-decoration: none;
+  color:hsla(253, 100%, 92%, 1);
+}
+.index-story-img{
+  width: 100%;
+  text-align: center;
+}
+.index-story-img img{
+  width: 100%;
+  border: 4px solid transparent;
+  border-image: linear-gradient(0deg, #653DF1, #C4066D);
+  border-image-slice: 1;
+}
+.index-date{
+  background-color: var(--color-pink);
+  padding: var(--spacing-1);
+  color:hsla(327, 100%, 90%, 1);
 }
 
 /* Media queries */
