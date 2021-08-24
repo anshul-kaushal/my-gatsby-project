@@ -404,6 +404,11 @@ a:focus {
   padding: var(--spacing-1);
   color:hsla(327, 100%, 90%, 1);
 }
+.gatsby-resp-image-image{
+  border: 4px solid transparent;
+  border-image: linear-gradient(0deg, #653DF1, #C4066D);
+  border-image-slice: 1;
+}
 
 /* Media queries */
 

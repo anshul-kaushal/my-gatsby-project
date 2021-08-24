@@ -6,6 +6,7 @@ description: "Hello World"
 image: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
 ---
 
+![Writing](typewriter.jpg)
 
 ## Untitled
 
@@ -110,3 +111,4 @@ Writing it felt the hardest for some reason, maybe it was because the beat tempo
 >zameer te ve daag pashchataap de giran<br> 
 
 This one is close to my heart. Tried to pen down the fear that I've felt in my heart for the longest, losing someone close. A couple of months later, I lost my grandmother. Reading this verse aloud from my notebook makes me realise how soon my fears have materialised for the worst. I'd release this one soon, as an ode to my grandmother. 
+
