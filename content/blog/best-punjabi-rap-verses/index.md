@@ -74,7 +74,7 @@ This one has to be named yet. Though I'm quite proud of this one. The barrage of
 >baneya zakham naasur, aj ton tin vareyan dur<br>
 >pehli vaari mai pyaar, jdon kareya kabool<br>
 >agle din badleya man, kahe nu dasseya jhoot<br>
->us din bitch kehke menu hadd kaafiyan tappeya tu<br>
+>us din b***h kehke menu hadd kaafiyan tappeya tu<br>
 >sharam’ch dubbeya tu, phir vi na hatteya tu<br>
 >jd vi na chaldi teri, shabdan naal dasseya tu<br>
 >perfect lagda si kal, aj repulsive kinna?<br>
